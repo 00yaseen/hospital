@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="/Assests/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      /* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="position: fixed; width: 100%; height: 10%; background-color: darkgreen; border-bottom: 1px solid white;">
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <p class="title is-4" style="color:  white;">St.Stephen's Hospital</p>
+          </div>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start" style="margin-left: 150px;">
+            <a href="/Assests/index.html" class="navbar-item" style="color:  white;">
+              <b>Home</b>
+            </a>
+      
+            <a href="/Assests/HTML/About.html" class="navbar-item" style="color:  white;">
+                <b>About us</b>
+            </a>
+
+            <a href="/Assests/HTML/Services.html" class="navbar-item" style="color:  white;"> 
+                <b>Services</b>
+              </a>
+
+              <a href="/Assests/HTML/Department.html" class="navbar-item" style="color:  white;">
+                <b>Departments</b>
+              </a>
+
+              <a href="/Assests/HTML/Blog.html" class="navbar-item" style="color:  white;">
+                <b>Blogs</b>
+              </a>
+
+              <a href="/Assests/HTML/Contact.html" class="navbar-item" style="color:  white;">
+                <b>Contact Us</b>
+              </a>
+        </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="/Assests/HTML/appointment.html" class="button b"   style="background-color: #FF8C00;">
+                  <strong>Make An Appointment</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav><br><br><br>
+      <div style="background-color: darkgreen; width: 100%;"><br><br>
+        <p class="title is-2 has-text-centered" style="color: white;">Appointment</p>
+        <p class="has-text-centered" style="color: white;"> Home >> Appointment</p><br><br><br>
+        </div><br><br>
+
+      <div class="columns has-text-centered">
+        <div class="column is-3"></div>
+        <div class="column is-6 has-text-centered">
+      <div class="card has-text-centered">
+            <p class="title is-4 has-text-centered" style="background-color: #FF8C00; padding: 5px 15px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; color: white;">Book Appointment</p><hr>
+            <div class="card has-text-centered" style="background-color: white; box-shadow: 0px 8px 16px #FF8C00; width: 1000px;"><br>
+              <p style="border-bottom: 1px solid darkgreen;"><b>Fill The Form</b></p><br><br>
+              <form id="bookingForm">
+                <b style="font-size: 21px;">Details*</b><br><br>
+                <input type="name" id="name" placeholder="Full Name" style="padding: 8px 16px; width: 500px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <input type="age" id="age" placeholder="Age" style="padding: 8px 16px; width: 500px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <input type="phone" id="phone" placeholder="Phone" style="padding: 8px 16px; width: 500px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <input type="purpose" id="purpose" placeholder="Purpose" style="padding: 8px 16px; width: 500px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <input type="doctor" id="doctor" placeholder="Doctor Name" style="padding: 8px 16px; width: 500px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <input type="datetime-local" id="Date" placeholder="Date & Time" style="padding: 8px 16px; width: 500px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <b style="font-size: 21px;">Address*</b><br><br>
+                <input type="area" id="area" placeholder="Area" style="padding: 8px 16px; width: 250px; border-radius: 10px; border-color: #FF8C00;" required>
+                <input type="city" id="city" placeholder="City" style="padding: 8px 16px; width: 250px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <select type="state" id="state" placeholder="State" style="padding: 8px 16px; width: 250px; border-radius: 10px; border-color: #FF8C00;" required>
+                  <option>----Select State----</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Andman & Nicobar</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chandigarh</option>
+                  <option>Chhattisgarh</option>
+                  <option>Delhi</option>
+                  <option>D.N.H.D & Diu</option>
+                  <option>Goa</option>
+                  <option>Gujrat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>J & K</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Ladakh</option>
+                  <option>Lakshadweep</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharastra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Puducherry</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+                  <option></option>
+              </select>
+                <input type="country" id="country" placeholder="Country" style="padding: 8px 16px; width: 250px; border-radius: 10px; border-color: #FF8C00;" required><br><br>
+                <button type="submit" class="button">Book Appointment</button><br><br>
+                
+              </form>
+            </div>
+          </div>
+          </div>
+          <!-- Popup message -->
+    <div id="successPopup" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <p class="title">Done!</p>
+          <p>Appointment successfully booked!</p>
+      </div>
+  </div>
+
+          <div class="column is-3"></div>
+          </div>
+          <br><br><hr style="color: darkgreen;">
+
+          <!--doctors-->
+        <p class="title has-text-centered" style="font-family: Helvetica;">Our Special Doctors</p><br>
+        <div class="columns" style="margin-left: 0.5rem; margin-right: 0.5rem;">
+
+          <div class="column is-3">
+            <div class="card" style="border-radius: 4px; padding: 8px 16px; border: 1px solid #FF8C00;" id="doctors">
+              <img src="/Assests/img/about-us/slide-4.png" class="image is-square">
+              <p><b>Family Physician</b></p>
+              <p class="title"><a href="/Assests/HTML/about-details.html">Dr.Nancy</a></p>
+              <p>compassionate care for all ages.</p>
+              <ul style="display: inline-flex;">
+                <li style="padding: 10px;"><a href=""><i class="fa fa-instagram" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-linkedin" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-twitter" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-facebook" style="color: black;"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card" style="border-radius: 4px; padding: 8px 16px; border: 1px solid #FF8C00;" id="doctors">
+              <img src="/Assests/img/about-us/slide-6.png" class="image is-square">
+              <p><b>Surgeon</b></p>
+              <p class="title">Dr.David Lee</p>
+              <p>Skillfull hands, transforming lives</p>
+              <ul style="display: inline-flex;">
+                <li style="padding: 10px;"><a href=""><i class="fa fa-instagram" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-linkedin" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-twitter" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-facebook" style="color: black;"></i></a></li>
+              </ul>
+              
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card" style="border-radius: 4px; padding: 8px 16px;border: 1px solid #FF8C00;" id="doctors">
+              <img src="/Assests/img/about-us/slide-5.png" class="image is-square">
+              <p><b>Dermatologist</b></p>
+              <p class="title">Dr.Denial Brown</p>
+              <p>Focuses on skin,hair disorders.</p>
+              <ul style="display: inline-flex;">
+                <li style="padding: 10px;"><a href=""><i class="fa fa-instagram" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-linkedin" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-twitter" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-facebook" style="color: black;"></i></a></li>
+              </ul>
+              
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card" style="border-radius: 4px; padding: 8px 16px; border: 1px solid #FF8C00;" id="doctors">
+              <img src="/Assests/img/about-us/slide-5.png" class="image is-square">
+              <p><b>Dermatologist</b></p>
+              <p class="title">Dr.Denial Brown</p>
+              <p>Focuses on skin,hair disorders.</p>
+              <ul style="display: inline-flex;">
+                <li style="padding: 10px;"><a href=""><i class="fa fa-instagram" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-linkedin" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-twitter" style="color: black;"></i></a></li>
+                <li style="padding: 10px;"><a href=""><i class="fa fa-facebook" style="color: black;"></i></a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div><hr>
+
+
+   <!--footer-->
+   <footer class="footer" style="background-color: darkgreen;">
+    <p class="title is-4 has-text-centered" style="color: white;">St.Stephen's Hospital</p>
+    <p class="sub-title has-text-centered" style="color: white;">Our family-centered approach to healthcare ensures that each memeber of your family receives personalized attention.</p>
+    <br><div class="columns has-text-centered">
+      <div class="column">
+      <ul style="display: inline-flex;">
+        <li style="padding:10px;"><a href="#"><i class="fa fa-linkedin" style="font-size: 25px; color: white;"></i></a></li>
+        <li style="padding:10px;"><a href="#"><i class="fa fa-youtube" style="font-size: 25px; color: white;"></i></a></li>
+        <li style="padding:10px;"><a href="#"><i class="fa fa-twitter" style="font-size: 25px; color: white;"></i></a></li>
+        <li style="padding:10px;"><a href="#"><i class="fa fa-facebook" style="font-size: 25px; color: white;"></i></a></li>
+        <li style="padding:10px;"><a href="#"><i class="fa fa-instagram" style="font-size: 25px; color: white;"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="columns">
+        <div class="column is-3">
+            <h4 style="color:white; font-weight: bold; margin-left: 20%;">Quick Links</h4><br>
+            <div class="columns">
+              <div class="column is-6">
+                <ul style="list-style-type: square; color: white; margin-left: 2%;">
+                  <li><a href="#about" style="color: white;">About-us</a></li><br>
+                  <li><a href="#docters" style="color: white;"> Find a Docters</a></li><br>
+                  <li><a href="#services" style="color: white;">Services</a></li><br>
+                  <li><a href="#contact" style="color: white;">Contact-us</a></li>
+
+                </ul>
+              </div>
+              <div class="column is-6">
+                <ul style="list-style-type: square; color: white;">
+                  <li><a href="#services" style="color: white;">Appointment</a></li><br>
+                  <li><a href="#about" style="color: white;">Patient Portal</a></li><br>
+                  <li><a href="#docters" style="color: white;">Careers and Job</a></li><br>
+                  <li><a href="#services" style="color: white;">Blogs</a></li><br>
+
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <div class="column is-3">
+            <h4 style="color: white; font-weight: bold;">Contact Details</h4><br>
+            <ul >
+              <li><a href="#address" style="color: white;"><i class="fa fa-map-marker" style="font-size: 15px; color: white;"></i>  BM Chawk Daryaganj, New Delhi 110006</a></li><br>
+              <li><a href="mailto:" style="color: white;"><i class="fa fa-envelope-open" style="font-size: 15px; color: white;"></i>  ststephenhospital@gmail.com</a></li><br>
+              <li><a href="tel:" style="color: white;"><i class="fa fa-phone" style="font-size: 15px; color: white;"></i>  +91 9519877941</a></li><br>
+              <li><a href="#services" style="color: white;"><i class="fa fa-clock-o" style="font-size: 15px; color: white;"></i>  10 AM - 4 PM, Monday to Saturday</a></li>
+            </ul>
+        </div>
+
+        <div class="column is-3">
+            <h4 style="color: white; font-weight: bold;">Newslatter</h4><br>
+            <h5 style="color: white; font-weight: bold;">Subscribe to Our Newslatter</h5><br>
+            <p style="color: white;">Stay informed and never miss out on the leatest<br> news, helth tips.</p><br>
+            <input type="email" name="email" placeholder="Enter Your Email...." style="padding: 20px; border-radius: 10px; background-color: transparent; width: 20rem; border-color: white;"><br><br>
+            <div class="buttons">
+              <a class="button is-white">
+                <strong> <i class="fa fa-send"></i> Subscribe</strong>
+              </a>
+            </div>
+        </div>
+        <div class="column is-3">
+          <h4 style="color: white; font-weight: bold;">Support Our Hospital</h4><br>
+          <p style="color: white;">Your donation helps us provide better care and support for our patients.</p><br>
+          <a href="donate.html" class="button is-white">
+            <strong> <i class="fas fa-donate" style="color: white; font-size: 15px;"></i> Donate Now</strong>
+          </a><br><br><br>
+          <h4 style="color: white; font-weight: bold;">Mobile App</h4><br>
+
+        </div>
+    </div><hr>
+    <div class="columns">
+      <div class="column">
+        <p class="sub-title has-text-left" style="color: antiquewhite; opacity: 0.5;">&copy; st.stephen's Hospital All Right Reserved - 2024</p> 
+      </div>
+
+      <div class="column">
+        <p class="sub-title has-text-right"><a href="#" style="color: antiquewhite; opacity: 0.5;">Privacy Policy</a>  -  <a href="#" style="color: antiquewhite; opacity: 0.5;">Terms & Conditions</a></p> 
+      </div>
+    </div>
+  </footer>
+
+  
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const bookingForm = document.getElementById('bookingForm');
+    const successPopup = document.getElementById('successPopup');
+    const closePopupBtn = document.getElementById('closePopup');
+
+    bookingForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission to server
+
+        // Show the popup
+        successPopup.style.display = 'flex';
+
+        // Clear the form
+        bookingForm.reset();
+    });
+
+    closePopupBtn.addEventListener('click', function() {
+        successPopup.style.display = 'none'; // Close the popup
+    });
+
+    // Close popup when clicking outside of the popup content
+    window.addEventListener('click', function(event) {
+        if (event.target === successPopup) {
+            successPopup.style.display = 'none';
+        }
+    });
+});
+</script>
+</body>
+</html>

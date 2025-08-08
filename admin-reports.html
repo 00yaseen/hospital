@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assests/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Reports</title>
+</head>
+<body bgcolor="#f2f2f2">
+    <div class="sidebar">
+        <div>
+            <img src="/Assests/img/about-us/slide-6.png" alt="pic-admin" class="imgage is-square" style="border-radius: 1500px; background-color: aliceblue; height: 70px; width: 70px; margin-left: 1px; margin-top: -5px;">
+            </div>
+            <div style="margin-left: 90px; margin-top: -70px; text-align: left;">
+            <p>Welcome</p>
+            <p style="font-weight: bolder;">Dr.Mo Yaseen</p>
+            <ul style="display: inline-flex; padding-bottom: 30px; padding-top: 25px; margin-left: -85px;">
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-envelope-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-user-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-sun-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href="/Assests/HTML/Admin.html"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+        <div><hr>
+            <h2><b>Main Navigation</b></h2>
+        </div>
+
+        <ul>
+            <li><a href="/Assests/HTML/Dashboard.html"><i class="fa fa-home" style="font-size: 21px;"></i> Dashboard</a></li>
+            <li><a href="/Assests/HTML/add-patients.html"><i class="fa fa-calendar" style="font-size: 21px;"></i> Appointments</a></li>
+            <li><a href="/Assests/HTML/Admin-Doc.html"><i class="fa fa-user-plus" style="font-size: 21px;"></i> Doctors</a></li>
+            <li><a href="/Assests/HTML/Admin-patient.html"><i class="fa fa-users" style="font-size: 21px;"></i> Patients</a></li>
+            <li><a href="/Assests/HTML/Admin-payment.html"><i class="fa fa-usd" style="font-size: 21px;"></i> Payment</a></li>
+            <li><a href="/Assests/HTML/admin-reports.html"><i class="fa fa-file-text-o" style="font-size: 21px;"></i> Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <b style="padding-right: 10px; padding-left: 5px; background-color: aliceblue;"><a href="/Assests/HTML/admin-reports.html" class="report">Income Reports</a></b>
+            <b style="padding-right: 10px; padding-left: 5px; background-color: aliceblue;"><a href="/Assests/HTML/sales-report.html" class="report">Sales Reports</a></b>
+            <div class="cards">
+                <div class="card-1" style="background-color: lightgreen;"><br>
+                    <p style="font-size: 30px; font-weight: bolder;">TOTAL INCOME</p>
+                    <b style="padding-bottom: 20px; font-size: 25px;">&#8377; 127,536</b>
+                </div>
+                <div class="card-1" style="background-color: lightsalmon;"><br>
+                    <p style="font-size: 30px; font-weight: bolder;">UNIQUE PATIENTS</p>
+                    <b style="padding-bottom: 20px; font-size: 25px;"> 125</b>
+                </div>
+            </div><br><br>
+
+            <div class="cards">
+                <div class="card-1" style="background-color: skyblue;"><br>
+                    <p style="font-size: 30px; font-weight: bolder;">MONTHLY INCOME</p>
+                    <b style="padding-bottom: 20px; font-size: 25px;">&#8377; 457</b>
+                </div>
+
+                <div class="card-1" style="background-color:  lightpink"><br>
+                    <p style="font-size: 30px; font-weight: bolder;">NET PROFIT</p>
+                    <b style="padding-bottom: 20px; font-size: 25px;">&#8377; 1 063</b>
+                </div>
+            </div><br><br>
+
+            <div class="cards">
+                <div class="card-1" style="background-color: white">
+                    <h1><b>INCOME ANALYSIS</b></h1>
+    <style>
+        /* CSS to style the chart container */
+        .chart-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+    <div class="chart-container">
+        <canvas id="surveyChartl"></canvas>
+    </div>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // JavaScript to create the survey chart
+        const ctl = document.getElementById('surveyChartl').getContext('2d');
+        const surveyChartl = new Chart(ctl, {
+            type: 'bar', // Type of chart: 'bar', 'line', 'pie', etc.
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+                datasets: [{
+                    label: 'ANALYSIS',
+                    data: [10, 19, 10, 5, 50, 20, 5, 75], // Corresponding votes for each option
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+                </div>
+            </div><br><br>
+
+<!--second-->
+
+<div class="cards">
+    <div class="card-1" style="background-color: white">
+        <h1><b>INCOME ANALYSIS</b></h1>
+<style>
+/* CSS to style the chart container */
+.chart-container {
+width: 100%;
+margin: 0 auto;
+}
+</style>
+<div class="chart-container">
+<canvas id="surveyCharte"></canvas>
+</div>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// JavaScript to create the survey chart
+const cto = document.getElementById('surveyCharte').getContext('2d');
+const surveyCharte = new Chart(cto, {
+type: 'line', // Type of chart: 'bar', 'line', 'pie', etc.
+data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+    datasets: [{
+        label: 'ANALYSIS',
+        data: [10, 19, 10, 5, 50, 20, 5, 75], // Corresponding votes for each option
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    }
+}
+});
+</script>
+    </div>
+</div><br><br>
+<!--Third-->
+
+<div class="cards">
+    <div class="card-1" style="background-color: white">
+        <h1><b>INCOME ANALYSIS</b></h1>
+<style>
+/* CSS to style the chart container */
+.chart-container {
+width: 100%;
+margin: 0 auto;
+}
+</style>
+<div class="chart-container">
+<canvas id="surveyCharts"></canvas>
+</div>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// JavaScript to create the survey chart
+const cts = document.getElementById('surveyCharts').getContext('2d');
+const surveyCharts = new Chart(cts, {
+type: 'line', // Type of chart: 'bar', 'line', 'pie', etc.
+data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+    datasets: [{
+        label: 'ANALYSIS',
+        data: [85, 109, 110, 50, 510, 230, 501, 705], // Corresponding votes for each option
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    }
+}
+});
+</script>
+    </div>
+</div>
+<!--content end--> 
+</div>       
+</div>
+
+</body>
+</html>

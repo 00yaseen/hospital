@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assests/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Doctors</title>
+    <style>
+        /* CSS to style the table and form */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .form-container-1{
+            display: none;
+        }
+
+        .form-container input[type="text"], .form-container input[type="number"], .form-container input[type="phone"], .form-container input[type="role"], .form-container input[type="date"], .form-container input[type="salary"] {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        .form-container button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body bgcolor="#f2f2f2">
+    <div class="sidebar">
+        <div>
+            <img src="/Assests/img/about-us/slide-6.png" alt="pic-admin" class="imgage is-square" style="border-radius: 1500px; background-color: aliceblue; height: 70px; width: 70px; margin-left: 1px; margin-top: -5px;">
+            </div>
+            <div style="margin-left: 90px; margin-top: -70px; text-align: left;">
+            <p>Welcome</p>
+            <p style="font-weight: bolder;">Dr.Mo Yaseen</p>
+            <ul style="display: inline-flex; padding-bottom: 30px; padding-top: 25px; margin-left: -85px;">
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-envelope-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-user-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-sun-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href="/Assests/HTML/Admin.html"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+        <div><hr>
+            <h2><b>Main Navigation</b></h2>
+        </div>
+
+        <ul>
+            <li><a href="/Assests/HTML/Dashboard.html"><i class="fa fa-home" style="font-size: 21px;"></i> Dashboard</a></li>
+            <li><a href="/Assests/HTML/add-patients.html"><i class="fa fa-calendar" style="font-size: 21px;"></i> Appointments</a></li>
+            <li><a href="/Assests/HTML/Admin-Doc.html"><i class="fa fa-user-plus" style="font-size: 21px;"></i> Doctors</a></li>
+            <li><a href="/Assests/HTML/Admin-patient.html"><i class="fa fa-users" style="font-size: 21px;"></i> Patients</a></li>
+            <li><a href="/Assests/HTML/Admin-payment.html"><i class="fa fa-usd" style="font-size: 21px;"></i> Payment</a></li>
+            <li><a href="/Assests/HTML/admin-reports.html"><i class="fa fa-file-text-o" style="font-size: 21px;"></i> Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <div id="dashboard" class="section">
+            <h2 style="background-color: darkgreen; color: white; font-size: 45px; font-weight: bolder;">All Doctors</h2><br>
+            <div class="cards">
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div><br><br>
+            <div class="cards">
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="card-1">
+                    <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                    <p><b>Dr.Mo Yaseen</b></p>
+                    <p>Dentist</p>
+                    <p><a href="">www.mywebsite.com</a></p>
+                    <p>bm chauk daryaganj New delhi</p><br>
+                    <a href="" class="button"> View Profile</a><br>
+                    <ul style="display: inline-flex; padding-top: 15px;">
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                        <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                </div><br><br>
+
+                <div class="cards">
+                    <div class="card-1">
+                        <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                        <p><b>Dr.Mo Yaseen</b></p>
+                        <p>Dentist</p>
+                        <p><a href="">www.mywebsite.com</a></p>
+                        <p>bm chauk daryaganj New delhi</p><br>
+                        <a href="" class="button"> View Profile</a><br>
+                        <ul style="display: inline-flex; padding-top: 15px;">
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-1">
+                        <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                        <p><b>Dr.Mo Yaseen</b></p>
+                        <p>Dentist</p>
+                        <p><a href="">www.mywebsite.com</a></p>
+                        <p>bm chauk daryaganj New delhi</p><br>
+                        <a href="" class="button"> View Profile</a><br>
+                        <ul style="display: inline-flex; padding-top: 15px;">
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="card-1">
+                        <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                        <p><b>Dr.Mo Yaseen</b></p>
+                        <p>Dentist</p>
+                        <p><a href="">www.mywebsite.com</a></p>
+                        <p>bm chauk daryaganj New delhi</p><br>
+                        <a href="" class="button"> View Profile</a><br>
+                        <ul style="display: inline-flex; padding-top: 15px;">
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="card-1">
+                        <img src="/Assests/img/about-us/slide-6.png" class="imgage is-square" style="height: 60px; width: 60px; border-radius: 100px; background-color: black; border: 5px solid #f2f2f2;">
+                        <p><b>Dr.Mo Yaseen</b></p>
+                        <p>Dentist</p>
+                        <p><a href="">www.mywebsite.com</a></p>
+                        <p>bm chauk daryaganj New delhi</p><br>
+                        <a href="" class="button"> View Profile</a><br>
+                        <ul style="display: inline-flex; padding-top: 15px;">
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-facebook"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-twitter"></i></a></li>
+                            <li style="padding-right: 10px;"><a href=""> <i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    </div><br><br>
+                    <div class="card-1">
+                        <a class="button is-warning" onclick="document.getElementById('myForm').style.display = 'block';" style="padding-top: 10px;">Add</a><br><br><br>
+                        <div class="form-container-1" id="myForm">
+                            <div class="form-container">
+                            <input type="text" id="patientName" placeholder="Name">
+                            <input type="number" id="patientAge" placeholder="Age">
+                            <input type="phone" id="patientPhone" placeholder="Phone">
+                            <input type="role" id="patientPurpose" placeholder="Role">
+                            <input type="date" id="patientDoctor" placeholder="Joining date">
+                            <input type="salary" id="date" placeholder="Salary"><br><br>
+                            <button onclick="addPatient()">Add Doctor</button>
+                        </div>
+                    
+                        <table id="patientTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Phone</th>
+                                    <th>Role</th>
+                                    <th>Joining Date</th>
+                                    <th>Salary in &#8377;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+                    <script>
+                       // JavaScript function to add a new patient to the table
+                       function addPatient() {
+                            const name = document.getElementById('patientName').value;
+                            const age = document.getElementById('patientAge').value;
+                            const phone = document.getElementById('patientPhone').value;
+                            const purpose = document.getElementById('patientPurpose').value;
+                            const doctor = document.getElementById('patientDoctor').value;
+                            const date = document.getElementById('date').value;
+                
+                            if (name === "" || age === "" || phone === "" || purpose === "" || doctor === "" || date === "") {
+                                alert("Please fill in all fields.");
+                                return;
+                            }
+                
+                            const table = document.getElementById('patientTable').getElementsByTagName('tbody')[0];
+                            const newRow = table.insertRow();
+                
+                            const nameCell = newRow.insertCell(0);
+                            const ageCell = newRow.insertCell(1);
+                            const phoneCell = newRow.insertCell(2);
+                            const purposeCell = newRow.insertCell(3);
+                            const doctorCell = newRow.insertCell(4);
+                            const dateCell = newRow.insertCell(5);
+                
+                            nameCell.textContent = name;
+                            ageCell.textContent = age;
+                            phoneCell.textContent = phone;
+                            purposeCell.textContent = purpose;
+                            doctorCell.textContent = doctor;
+                            dateCell.textContent = date;
+                
+                            document.getElementById('patientName').value = '';
+                            document.getElementById('patientAge').value = '';
+                            document.getElementById('patientPhone').value = '';
+                            document.getElementById('patientPurpose').value = '';
+                            document.getElementById('patientDoctor').value = '';
+                            document.getElementById('date').value = '';
+                        } 
+                    </script>
+
+                
+
+                
+
+                
+    </div>
+</body>
+</html>

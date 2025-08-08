@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assests/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dashboard</title>
+    <style>
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body style="background-color: #f2f2f2;">
+    <div class="sidebar">
+        <div>
+            <img src="/Assests/img/about-us/slide-6.png" alt="pic-admin" class="imgage is-square" style="border-radius: 1500px; background-color: aliceblue; height: 70px; width: 70px; margin-left: 1px; margin-top: -5px;">
+            </div>
+            <div style="margin-left: 90px; margin-top: -70px; text-align: left;">
+            <p>Welcome</p>
+            <p style="font-weight: bolder;">Dr.Mo Yaseen</p>
+            <ul style="display: inline-flex; padding-bottom: 30px; padding-top: 25px; margin-left: -85px;">
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-envelope-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-user-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href=""><i class="fa fa-sun-o"></i></a></li>
+                <li style="padding-right: 20px;"><a href="/Assests/HTML/Admin.html"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+        <div><hr>
+            <h2><b>Main Navigation</b></h2>
+        </div>
+
+        <ul>
+            <li><a href="#dashboard"><i class="fa fa-home" style="font-size: 21px;"></i> Dashboard</a></li>
+            <li><a href="/Assests/HTML/add-patients.html"><i class="fa fa-calendar" style="font-size: 21px;"></i> Appointments</a></li>
+            <li><a href="/Assests/HTML/Admin-Doc.html"><i class="fa fa-user-plus" style="font-size: 21px;"></i> Doctors</a></li>
+            <li><a href="/Assests/HTML/Admin-patient.html"><i class="fa fa-users" style="font-size: 21px;"></i> Patients</a></li>
+            <li><a href="/Assests/HTML/Admin-payment.html"><i class="fa fa-usd" style="font-size: 21px;"></i> Payment</a></li>
+            <li><a href="/Assests/HTML/admin-reports.html"><i class="fa fa-file-text-o" style="font-size: 21px;"></i> Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div id="dashboard" class="section">
+            <h2 style="background-color: darkgreen; color: white; font-size: 45px; font-weight: bolder;">Dashboard</h2><br>
+            <div class="cards">
+                <div class="card-1" style="background-color: lightsalmon;"><i class="fa fa-user-plus" style="font-size: 35px; color: white;"></i><br><b style="color: black;">New Patient<br>25</b></div>
+                <div class="card-1" style="background-color: lightgreen;"><i class="fa fa-users" style="font-size: 35px; color: white;"></i><br><b style="color: black;">OPD <br>50</b></div>
+                <div class="card-1" style="background-color: lightskyblue;"><i class="fa fa-bug" style="font-size: 35px; color: white;"></i><br><b style="color: black;">Today's Operations <br>07</b></div>
+                <div class="card-1" style="background-color: lightblue;"><i class="fa fa-bank" style="font-size: 35px; color: white;"></i><br><b style="color: black;">Hospital Earning <br>$3,590</b></div><br><br>
+            </div><br><br>
+            <div class="cards">
+                <div class="card-1" style="background-color: white">
+                    <h1><b>Hospital Survey</b></h1>
+    <style>
+        /* CSS to style the chart container */
+        .chart-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+    <div class="chart-container">
+        <canvas id="surveyChart"></canvas>
+    </div>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // JavaScript to create the survey chart
+        const ctx = document.getElementById('surveyChart').getContext('2d');
+        const surveyChart = new Chart(ctx, {
+            type: 'line', // Type of chart: 'bar', 'line', 'pie', etc.
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+                datasets: [{
+                    label: 'Survey 2024',
+                    data: [1, 19, 10, 5, 50, 20, 5, 75], // Corresponding votes for each option
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+                </div>
+            </div><br><br>
+
+
+<!--patient, surgery, treatment chart etc -->
+<div class="card-1">
+    
+<div class="columns">
+    <div class="column is-4" style="background-color: white">
+        <h1><b>New Patients</b></h1>
+            <style>
+            /* CSS to style the chart container */
+            .chart-container-1 {
+                width: 100%;
+                margin: 0 auto;
+            }
+            </style>
+            <div class="chart-container-1">
+            <canvas id="surveyChartse"></canvas>
+            </div>
+            
+            <!-- Include Chart.js -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            // JavaScript to create the survey chart
+            const ctv = document.getElementById('surveyChartse').getContext('2d');
+            const surveyChartse = new Chart(ctv, {
+                type: 'line', // Type of chart: 'bar', 'line', 'pie', etc.
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+                    datasets: [{
+                        label: 'Patients Rate',
+                        data: [10, 5, 10, 5, 50, 20, 5, 75], // Corresponding votes for each option
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+                    </div>
+    <div class="column is-4" style="background-color: white; border-left: 1px solid orange; border-right: 1px solid orange;">
+        <h1><b>Heart Surgeries</b></h1>
+        <style>
+            /* CSS to style the chart container */
+            .chart-container-1 {
+                width: 100%;
+                margin: 0 auto;
+            }
+            </style>
+            <div class="chart-container-1">
+            <canvas id="surveyChartses"></canvas>
+            </div>
+            
+            <!-- Include Chart.js -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            // JavaScript to create the survey chart
+            const ctu = document.getElementById('surveyChartses').getContext('2d');
+            const surveyChartses = new Chart(ctu, {
+                type: 'bar', // Type of chart: 'bar', 'line', 'pie', etc.
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+                    datasets: [{
+                        label: 'Surgery Rate',
+                        data: [1, 15, 10, 5, 57, 29, 25, 75], // Corresponding votes for each option
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+    </div>
+
+    <div class="column is-4" style="background-color: white;">
+        <h1><b>Medical Treatment</b></h1>
+        <style>
+            /* CSS to style the chart container */
+            .chart-container-1 {
+                width: 100%;
+                margin: 0 auto;
+            }
+            </style>
+            <div class="chart-container-1">
+            <canvas id="surveyChartsese"></canvas>
+            </div>
+            
+            <!-- Include Chart.js -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            // JavaScript to create the survey chart
+            const ctc = document.getElementById('surveyChartsese').getContext('2d');
+            const surveyCharts = new Chart(ctc, {
+                type: 'line', // Type of chart: 'bar', 'line', 'pie', etc.
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'], // Survey options
+                    datasets: [{
+                        label: 'Treatment Rate',
+                        data: [10, 29, 45, 55, 65, 70, 85, 95], // Corresponding votes for each option
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+    </div>
+</div>
+</div><br>
+<!--patients table-->
+<div class="card-1">
+    <h1><b>New Patients List</b></h1><hr>
+    <table id="patientTable" >
+        <thead style="border-bottom: 2px solid orangered; padding-top: 30px;">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Mobile</th>
+                <th>Purpose</th>
+                <th>Doctor</th>
+                <th>Date & Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mo Yaseen</td>
+                <td>22</td>
+                <td>+91 9519877941</td>
+                <td>Liver Problem</td>
+                <td>Dr. Amit Kumar</td>
+                <td>31/08/2024, 10:32</td>
+            </tr>
+        </tbody>
+    </table>
+</div><br><br>
+
+<!--country visit-->
+<div class="card-1">
+    <h1><b>Visits From Country</b></h1>
+    <style>
+        /* CSS to style the chart container */
+        .chart-container-1 {
+            width: 90%;
+            margin: 0 auto;
+        }
+        </style>
+        <div class="chart-container-1">
+        <canvas id="surveyChartsesp"></canvas>
+        </div>
+        
+        <!-- Include Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+        // JavaScript to create the survey chart
+        const ctp = document.getElementById('surveyChartsesp').getContext('2d');
+        const surveyChartsesp = new Chart(ctp, {
+            type: 'bar', // Type of chart: 'bar', 'line', 'pie', etc.
+            data: {
+                labels: ['USA', 'INDIA', 'CHINA', 'FRANCE', 'BRAZIL', 'RUSSIA', 'UAE', 'JAPAN'], // Survey options
+                datasets: [{
+                    label: 'Visit Rate ',
+                    data: [1, 15, 10, 5, 57, 29, 25, 75], // Corresponding votes for each option
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
+</div>
+<!--end main section-->
+        </div>        
+    </div>
+    <script>
+
+        
+    </script>
+</body>
+</html>
